@@ -1,0 +1,18 @@
+Unit – 1
+Write a Java program to access a collection using an Iterator.
+Write a Java program to implement the Comparable interface.
+Write a Java program to differentiate between different Map classes.
+Write a Java program implementing various methods of LinkedList and ArrayList.
+
+Unit – 2
+Write a Java program to create a simple JavaBean.
+Write a Java program to display the root node and child nodes of an XML document.
+Write a Java program to view the DOM tree.
+Write a Servlet program to display "Hello World".
+Write a Servlet program to display arithmetic operations.
+Write a Servlet program to display/read parameters from a login page.
+Write a JSP program to display "Hello World" and the number of hits.
+Write a JSP program to demonstrate the Scriptlet tag, Expression tag, and Declarative tag.
+Write a Java program to create a table in a database.
+Write a Java program to insert data into a table in a database.
+Write a Java program to perform a SELECT operation on a database.
