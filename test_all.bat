@@ -28,48 +28,48 @@ javac unit1\Prog04_ListMethodsDemo.java
 java -cp unit1 Prog04_ListMethodsDemo
 
 echo.
-echo --- UNIT 2 (WINDOWS) ---
+echo --- UNIT 2 ---
 echo [1/6] Program 5 (JavaBean)...
-pushd unit2_windows\prog05_javabean
+pushd unit2\prog05_javabean
 javac StudentBean.java
 java StudentBean
 popd
 
 echo.
 echo [2/6] Program 6 (XML Root & Child Nodes)...
-pushd unit2_windows\prog06_xml_nodes
+pushd unit2\prog06_xml_nodes
 javac XMLNodes.java
 java XMLNodes
 popd
 
 echo.
 echo [3/6] Program 7 (DOM Tree Structure)...
-pushd unit2_windows\prog07_dom_tree
+pushd unit2\prog07_dom_tree
 javac DOMTreeView.java
 java DOMTreeView
 popd
 
 echo.
 echo [4/6] Compiling Servlets (Prog 8, 9, 10)...
-javac -cp "lib\javax.servlet-api-4.0.1.jar;." unit2_windows\prog08_servlet_hello\HelloServlet.java
-javac -cp "lib\javax.servlet-api-4.0.1.jar;." unit2_windows\prog09_servlet_calculator\CalcServlet.java
-javac -cp "lib\javax.servlet-api-4.0.1.jar;." unit2_windows\prog10_servlet_login\LoginServlet.java
+javac -cp "lib\javax.servlet-api-4.0.1.jar;." unit2\prog08_servlet_hello\HelloServlet.java
+javac -cp "lib\javax.servlet-api-4.0.1.jar;." unit2\prog09_servlet_calculator\CalcServlet.java
+javac -cp "lib\javax.servlet-api-4.0.1.jar;." unit2\prog10_servlet_login\LoginServlet.java
 
 echo.
 echo [5/6] Running JDBC Create Table & Insert Data...
-pushd unit2_windows\prog13_jdbc_create_table
+pushd unit2\prog13_jdbc_create_table
 javac -cp "..\..\lib\sqlite-jdbc.jar;." CreateTable.java
 java -cp "..\..\lib\sqlite-jdbc.jar;." CreateTable
 popd
 
-pushd unit2_windows\prog14_jdbc_insert
+pushd unit2\prog14_jdbc_insert
 javac -cp "..\..\lib\sqlite-jdbc.jar;." InsertData.java
 java -cp "..\..\lib\sqlite-jdbc.jar;." InsertData
 popd
 
 echo.
 echo [6/6] Running JDBC Select Data...
-pushd unit2_windows\prog15_jdbc_select
+pushd unit2\prog15_jdbc_select
 javac -cp "..\..\lib\sqlite-jdbc.jar;." SelectData.java
 java -cp "..\..\lib\sqlite-jdbc.jar;." SelectData
 popd

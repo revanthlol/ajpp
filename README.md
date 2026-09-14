@@ -2,26 +2,20 @@
 
 This repository contains clean, concise, and tested solutions for all 15 practical exam questions across Unit 1 and Unit 2.
 
-To make practical exam preparation completely stress-free:
-1. **Each program in Unit 2 is in its OWN isolated folder.** When you pick a question in your exam, you only need to open that single folder.
-2. **Dedicated OS Versions:**
-   - [`unit2_linux/`](unit2_linux/): Configured with Linux bash scripts (`run.sh` / `compile.sh`) and `:` classpath.
-   - [`unit2_windows/`](unit2_windows/): Configured with Windows batch scripts (`run.bat` / `compile.bat`) and `;` classpath.
-3. **Ultra-Concise Code:** All unnecessary boilerplate and verbose try-catches have been eliminated (using `throws Exception`), bringing programs down to ~15-20 lines so they are easy to memorize and write by hand on exam answer sheets.
+- **Exam-Optimized:** Each program in Unit 2 is in its **own isolated folder** (`unit2/prog05_javabean`, `unit2/prog06_xml_nodes`, etc.).
+- **Ultra-Concise Code:** Stripped of unnecessary boilerplate (using `throws Exception`), averaging just 10–22 lines per program for easy memorization.
+- **Windows-Ready (Default on `main`):** Includes ready-to-use `.bat` runners for Windows lab environments.
+- **Linux Users:** Switch to the [`linux`](https://github.com/revanthlol/ajpp/tree/linux) branch (`git checkout linux`) for Linux bash runners and `:` classpath configurations.
 
 ---
 
-## One-Click Execution (Run All)
+## One-Click Execution (Windows)
 
-### On Linux / macOS:
-```bash
-chmod +x test_all.sh
-./test_all.sh
-```
-
-### On Windows:
 - Double click **`test_all.bat`** in File Explorer
-- OR run in Command Prompt: `test_all.bat`
+- OR run in Command Prompt:
+  ```cmd
+  test_all.bat
+  ```
 
 ---
 
@@ -32,26 +26,13 @@ ajpp/
 ├── lib/
 │   ├── javax.servlet-api-4.0.1.jar       # Servlet API library
 │   └── sqlite-jdbc.jar                   # Standalone JDBC driver
-├── test_all.sh                           # Master test script (Linux)
-├── test_all.bat                          # Master test script (Windows)
+├── test_all.bat                          # Master test runner (Windows)
 ├── unit1/                                # Unit 1 Core Collection Programs
 │   ├── Prog01_IteratorDemo.java
 │   ├── Prog02_ComparableDemo.java
 │   ├── Prog03_MapComparison.java
 │   └── Prog04_ListMethodsDemo.java
-├── unit2_linux/                          # Unit 2 for Linux Labs (isolated folders)
-│   ├── prog05_javabean/
-│   ├── prog06_xml_nodes/
-│   ├── prog07_dom_tree/
-│   ├── prog08_servlet_hello/
-│   ├── prog09_servlet_calculator/
-│   ├── prog10_servlet_login/
-│   ├── prog11_jsp_hits/
-│   ├── prog12_jsp_tags/
-│   ├── prog13_jdbc_create_table/
-│   ├── prog14_jdbc_insert/
-│   └── prog15_jdbc_select/
-└── unit2_windows/                        # Unit 2 for Windows Labs (isolated folders)
+└── unit2/                                # Unit 2 Programs (isolated folders)
     ├── prog05_javabean/
     ├── prog06_xml_nodes/
     ├── prog07_dom_tree/
@@ -69,29 +50,26 @@ ajpp/
 
 ## Unit 2 Programs Quick Reference
 
-| # | Topic | Folder Name | Key Files |
+| # | Topic | Folder Name | Windows Runner |
 |---|---|---|---|
-| **5** | **JavaBean** | `prog05_javabean` | `StudentBean.java` |
-| **6** | **XML Root & Child Nodes** | `prog06_xml_nodes` | `XMLNodes.java`, `input.xml` |
-| **7** | **DOM Tree View** | `prog07_dom_tree` | `DOMTreeView.java`, `input.xml` |
-| **8** | **Servlet: Hello World** | `prog08_servlet_hello` | `HelloServlet.java`, `web.xml` |
-| **9** | **Servlet: Calculator** | `prog09_servlet_calculator` | `CalcServlet.java`, `calc.html`, `web.xml` |
-| **10** | **Servlet: Login Parameters** | `prog10_servlet_login` | `LoginServlet.java`, `login.html`, `web.xml` |
-| **11** | **JSP: Hit Counter** | `prog11_jsp_hits` | `hits.jsp` |
-| **12** | **JSP: Tags Demo** | `prog12_jsp_tags` | `tags.jsp` |
-| **13** | **JDBC: Create Table** | `prog13_jdbc_create_table`| `CreateTable.java` |
-| **14** | **JDBC: Insert Data** | `prog14_jdbc_insert` | `InsertData.java` |
-| **15** | **JDBC: Select Data** | `prog15_jdbc_select` | `SelectData.java` |
+| **5** | **JavaBean** | `unit2/prog05_javabean` | Double-click `run.bat` |
+| **6** | **XML Root & Child Nodes** | `unit2/prog06_xml_nodes` | Double-click `run.bat` |
+| **7** | **DOM Tree View** | `unit2/prog07_dom_tree` | Double-click `run.bat` |
+| **8** | **Servlet: Hello World** | `unit2/prog08_servlet_hello` | Double-click `compile.bat` |
+| **9** | **Servlet: Calculator** | `unit2/prog09_servlet_calculator` | Double-click `compile.bat` |
+| **10** | **Servlet: Login Parameters** | `unit2/prog10_servlet_login` | Double-click `compile.bat` |
+| **11** | **JSP: Hit Counter** | `unit2/prog11_jsp_hits` | Copy `hits.jsp` to Tomcat `webapps/ROOT/` |
+| **12** | **JSP: Tags Demo** | `unit2/prog12_jsp_tags` | Copy `tags.jsp` to Tomcat `webapps/ROOT/` |
+| **13** | **JDBC: Create Table** | `unit2/prog13_jdbc_create_table`| Double-click `run.bat` |
+| **14** | **JDBC: Insert Data** | `unit2/prog14_jdbc_insert` | Double-click `run.bat` |
+| **15** | **JDBC: Select Data** | `unit2/prog15_jdbc_select` | Double-click `run.bat` |
 
 ---
 
-## How to Run Any Single Program in Exam
-
-### On Linux:
+## For Linux Users
+Switch to the Linux branch:
 ```bash
-cd unit2_linux/prog05_javabean
-./run.sh
+git checkout linux
+chmod +x test_all.sh
+./test_all.sh
 ```
-
-### On Windows:
-Double click `run.bat` (or `compile.bat` for servlets) inside the program's folder.
