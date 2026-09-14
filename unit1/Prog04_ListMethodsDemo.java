@@ -6,9 +6,7 @@ import java.util.LinkedList;
 
 public class Prog04_ListMethodsDemo {
     public static void main(String[] args) {
-        System.out.println("==============================================");
-        System.out.println("         DEMONSTRATION OF ARRAYLIST           ");
-        System.out.println("==============================================");
+        System.out.println("DEMONSTRATION OF ARRAYLIST");
 
         // 1. ArrayList Methods
         ArrayList<String> arrayList = new ArrayList<>();
@@ -38,9 +36,7 @@ public class Prog04_ListMethodsDemo {
         System.out.println("ArrayList size: " + arrayList.size());
 
 
-        System.out.println("\n==============================================");
-        System.out.println("         DEMONSTRATION OF LINKEDLIST          ");
-        System.out.println("==============================================");
+        System.out.println("\nDEMONSTRATION OF LINKEDLIST");
 
         // 2. LinkedList Methods
         LinkedList<String> linkedList = new LinkedList<>();

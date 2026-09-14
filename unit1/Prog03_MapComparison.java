@@ -41,7 +41,7 @@ public class Prog03_MapComparison {
         System.out.println("\n3. TreeMap (Sorted by Key in Ascending Order):");
         System.out.println("   " + treeMap);
 
-        System.out.println("\n--- Key Differences ---");
+        System.out.println("\nKey Differences");
         System.out.println("- HashMap       : Fast O(1), No order guarantee, allows 1 null key.");
         System.out.println("- LinkedHashMap : Maintains insertion order, allows 1 null key.");
         System.out.println("- TreeMap       : Sorted order O(log n), does NOT allow null keys.");
