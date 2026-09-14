@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<college>
-    <department name="CSE">
-        <student>Alice</student>
-    </department>
-    <department name="ECE">
-        <student>Bob</student>
-    </department>
-</college>
