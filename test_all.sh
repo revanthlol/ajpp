@@ -19,8 +19,8 @@ echo -e "\n[4/4] Unit 1 - Program 4 (List Methods)..."
 javac unit1/Prog04_ListMethodsDemo.java && java -cp unit1 Prog04_ListMethodsDemo
 
 echo -e "\n--- UNIT 2 (LINUX) ---"
-echo "[1/6] Program 5 (JavaBean)..."
-(cd unit2/prog05_javabean && ./run.sh)
+echo "[1/6] Program 5 (JavaBean: JellyBean + JAR)..."
+(cd unit2/prog05_javabean && javac JellyBeanDemo.java && jar cfm JellyBean.jar manifest.mft JellyBean.class && echo "JellyBean compiled and packaged successfully.")
 
 echo -e "\n[2/6] Program 6 (XML Root & Child Nodes)..."
 (cd unit2/prog06_xml_nodes && ./run.sh)
