@@ -2,8 +2,6 @@
 
 This repository contains clean, concise, and tested solutions for all 15 practical exam questions across Unit 1 and Unit 2.
 
-- **Exam-Optimized:** Each program in Unit 2 is in its **own isolated folder** (`unit2/prog05_javabean`, `unit2/prog06_xml_nodes`, etc.).
-- **Ultra-Concise Code:** Stripped of unnecessary boilerplate (using `throws Exception`), averaging just 10–22 lines per program for easy memorization.
 - **Windows-Ready (Default on `main`):** Includes ready-to-use `.bat` runners for Windows lab environments.
 - **Linux Users:** Switch to the [`linux`](https://github.com/revanthlol/ajpp/tree/linux) branch (`git checkout linux`) for Linux bash runners and `:` classpath configurations.
 
