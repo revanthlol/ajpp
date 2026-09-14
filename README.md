@@ -52,7 +52,7 @@ ajpp/
 
 | # | Topic | Folder Name | Windows Runner |
 |---|---|---|---|
-| **5** | **JavaBean** | `unit2/prog05_javabean` | Double-click `run.bat` |
+| **5** | **JavaBean (JellyBean)** | `unit2/prog05_javabean` | Double-click `run.bat` |
 | **6** | **XML Root & Child Nodes** | `unit2/prog06_xml_nodes` | Double-click `run.bat` |
 | **7** | **DOM Tree View** | `unit2/prog07_dom_tree` | Double-click `run.bat` |
 | **8** | **Servlet: Hello World** | `unit2/prog08_servlet_hello` | Double-click `compile.bat` |

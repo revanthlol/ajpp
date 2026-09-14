@@ -29,10 +29,11 @@ java -cp unit1 Prog04_ListMethodsDemo
 
 echo.
 echo --- UNIT 2 ---
-echo [1/6] Program 5 (JavaBean)...
+echo [1/6] Program 5 (JavaBean: JellyBean + JAR)...
 pushd unit2\prog05_javabean
-javac StudentBean.java
-java StudentBean
+javac JellyBeanDemo.java
+jar cfm JellyBean.jar manifest.mft JellyBean.class
+echo JellyBean compiled and packaged with manifest.mft successfully.
 popd
 
 echo.
@@ -77,6 +78,7 @@ popd
 REM Clean temporary build files
 del /s /q *.class >nul 2>&1
 del /s /q *.db >nul 2>&1
+del /s /q unit2\prog05_javabean\*.jar >nul 2>&1
 
 echo.
 echo ==========================================================

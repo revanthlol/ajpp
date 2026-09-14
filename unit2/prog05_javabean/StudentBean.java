@@ -18,7 +18,10 @@ public class StudentBean implements Serializable {
     // Test runner
     public static void main(String[] args) {
         StudentBean s = new StudentBean();
-        s.setId(101);
+        s.setId(101);Manifest-Version: 1.0
+
+        Name: JellyBean.class
+        Java-Bean: True
         s.setName("Rahul");
         System.out.println("Student ID   : " + s.getId());
         System.out.println("Student Name : " + s.getName());
