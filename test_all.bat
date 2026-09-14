@@ -1,56 +1,85 @@
 @echo off
 REM ==========================================================
-REM          ADVANCED JAVA PRACTICAL EXAM RUNNER (WINDOWS)     
+REM      ADVANCED JAVA PRACTICAL EXAM RUNNER (WINDOWS)        
 REM ==========================================================
 echo ==========================================================
-echo           ADVANCED JAVA PRACTICAL EXAM RUNNER             
+echo      ADVANCED JAVA PRACTICAL EXAM RUNNER (WINDOWS)        
 echo ==========================================================
 
 echo.
-echo [1/7] Running Unit 1 - Program 1 (Iterator Demo)...
+echo --- UNIT 1 ---
+echo [1/4] Unit 1 - Program 1 (Iterator Demo)...
 javac unit1\Prog01_IteratorDemo.java
 java -cp unit1 Prog01_IteratorDemo
 
 echo.
-echo [2/7] Running Unit 1 - Program 2 (Comparable Interface)...
+echo [2/4] Unit 1 - Program 2 (Comparable Interface)...
 javac unit1\Prog02_ComparableDemo.java
 java -cp unit1 Prog02_ComparableDemo
 
 echo.
-echo [3/7] Running Unit 1 - Program 3 (Map Comparison)...
+echo [3/4] Unit 1 - Program 3 (Map Comparison)...
 javac unit1\Prog03_MapComparison.java
 java -cp unit1 Prog03_MapComparison
 
 echo.
-echo [4/7] Running Unit 1 - Program 4 (List Methods)...
+echo [4/4] Unit 1 - Program 4 (List Methods)...
 javac unit1\Prog04_ListMethodsDemo.java
 java -cp unit1 Prog04_ListMethodsDemo
 
 echo.
-echo [5/7] Running Unit 2 - Program 5 (JavaBean Demo)...
-javac unit2\Prog05_JavaBeanDemo.java
-java -cp unit2 Prog05_JavaBeanDemo
+echo --- UNIT 2 (WINDOWS) ---
+echo [1/6] Program 5 (JavaBean)...
+pushd unit2_windows\prog05_javabean
+javac StudentBean.java
+java StudentBean
+popd
 
 echo.
-echo [6/7] Running Unit 2 - Program 6 (XML Root & Child Nodes)...
-javac unit2\Prog06_XMLRootChildNodes.java
-java -cp unit2 Prog06_XMLRootChildNodes
+echo [2/6] Program 6 (XML Root & Child Nodes)...
+pushd unit2_windows\prog06_xml_nodes
+javac XMLNodes.java
+java XMLNodes
+popd
 
 echo.
-echo [7/7] Running Unit 2 - Program 7 (DOM Tree Structure)...
-javac unit2\Prog07_DOMTreeView.java
-java -cp unit2 Prog07_DOMTreeView
+echo [3/6] Program 7 (DOM Tree Structure)...
+pushd unit2_windows\prog07_dom_tree
+javac DOMTreeView.java
+java DOMTreeView
+popd
 
 echo.
-echo [JDBC] Running Database Programs (Table -^> Insert -^> Select)...
-if exist college.db del /f /q college.db
-javac -cp "lib\sqlite-jdbc.jar" unit2\jdbc\*.java
-java -cp "unit2\jdbc;lib\sqlite-jdbc.jar" Prog13_CreateTable
-java -cp "unit2\jdbc;lib\sqlite-jdbc.jar" Prog14_InsertData
-java -cp "unit2\jdbc;lib\sqlite-jdbc.jar" Prog15_SelectData
+echo [4/6] Compiling Servlets (Prog 8, 9, 10)...
+javac -cp "lib\javax.servlet-api-4.0.1.jar;." unit2_windows\prog08_servlet_hello\HelloServlet.java
+javac -cp "lib\javax.servlet-api-4.0.1.jar;." unit2_windows\prog09_servlet_calculator\CalcServlet.java
+javac -cp "lib\javax.servlet-api-4.0.1.jar;." unit2_windows\prog10_servlet_login\LoginServlet.java
+
+echo.
+echo [5/6] Running JDBC Create Table & Insert Data...
+pushd unit2_windows\prog13_jdbc_create_table
+javac -cp "..\..\lib\sqlite-jdbc.jar;." CreateTable.java
+java -cp "..\..\lib\sqlite-jdbc.jar;." CreateTable
+popd
+
+pushd unit2_windows\prog14_jdbc_insert
+javac -cp "..\..\lib\sqlite-jdbc.jar;." InsertData.java
+java -cp "..\..\lib\sqlite-jdbc.jar;." InsertData
+popd
+
+echo.
+echo [6/6] Running JDBC Select Data...
+pushd unit2_windows\prog15_jdbc_select
+javac -cp "..\..\lib\sqlite-jdbc.jar;." SelectData.java
+java -cp "..\..\lib\sqlite-jdbc.jar;." SelectData
+popd
+
+REM Clean temporary build files
+del /s /q *.class >nul 2>&1
+del /s /q *.db >nul 2>&1
 
 echo.
 echo ==========================================================
-echo           ALL CONSOLE PROGRAMS EXECUTED SUCCESSFULLY!      
+echo          ALL PROGRAMS EXECUTED SUCCESSFULLY!              
 echo ==========================================================
 pause

@@ -1,10 +1,17 @@
 # Advanced Java Programming - Practical Exam Programs
 
-This repository contains concise, well-documented, and thoroughly tested solutions for all 15 practical exam questions across Unit 1 and Unit 2, fully compatible with **both Windows and Linux**.
+This repository contains clean, concise, and tested solutions for all 15 practical exam questions across Unit 1 and Unit 2.
+
+To make practical exam preparation completely stress-free:
+1. **Each program in Unit 2 is in its OWN isolated folder.** When you pick a question in your exam, you only need to open that single folder.
+2. **Dedicated OS Versions:**
+   - [`unit2_linux/`](unit2_linux/): Configured with Linux bash scripts (`run.sh` / `compile.sh`) and `:` classpath.
+   - [`unit2_windows/`](unit2_windows/): Configured with Windows batch scripts (`run.bat` / `compile.bat`) and `;` classpath.
+3. **Ultra-Concise Code:** All unnecessary boilerplate and verbose try-catches have been eliminated (using `throws Exception`), bringing programs down to ~15-20 lines so they are easy to memorize and write by hand on exam answer sheets.
 
 ---
 
-## One-Click Execution
+## One-Click Execution (Run All)
 
 ### On Linux / macOS:
 ```bash
@@ -14,21 +21,7 @@ chmod +x test_all.sh
 
 ### On Windows:
 - Double click **`test_all.bat`** in File Explorer
-- OR in Command Prompt: `test_all.bat`
-- OR in PowerShell: `.\test_all.ps1`
-
----
-
-## Cross-Platform Differences Explained
-
-| Feature | Linux / macOS | Windows (CMD / PowerShell) |
-| :--- | :--- | :--- |
-| **Classpath Separator** | Colon (`:`) | Semicolon (`;`) |
-| **Path Separator** | Forward slash (`/`) | Backslash (`\`) or (`/`) |
-| **JDBC Classpath Example** | `-cp "unit2/jdbc:lib/sqlite-jdbc.jar"` | `-cp "unit2\jdbc;lib\sqlite-jdbc.jar"` |
-| **Deleting Temp DB** | `rm -f college.db` | `del /f /q college.db` |
-
-> *Note:* In Java source code, file paths have been implemented using `File.separator` and embedded fallbacks so that programs compile and run identically on both Windows and Linux without any manual path adjustments.
+- OR run in Command Prompt: `test_all.bat`
 
 ---
 
@@ -37,134 +30,68 @@ chmod +x test_all.sh
 ```
 ajpp/
 ├── lib/
-│   ├── javax.servlet-api-4.0.1.jar   # Servlet API for compilation
-│   └── sqlite-jdbc.jar               # Standalone JDBC driver
-├── test_all.sh                       # One-click execution script (Linux / Mac)
-├── test_all.bat                      # One-click execution script (Windows CMD)
-├── test_all.ps1                      # One-click execution script (Windows PowerShell)
-├── programs.txt                      # Original exam question list
-├── unit1/
-│   ├── Prog01_IteratorDemo.java      # Q1: Collection using Iterator
-│   ├── Prog02_ComparableDemo.java    # Q2: Comparable interface
-│   ├── Prog03_MapComparison.java     # Q3: HashMap vs LinkedHashMap vs TreeMap
-│   └── Prog04_ListMethodsDemo.java   # Q4: ArrayList and LinkedList methods
-└── unit2/
-    ├── sample.xml                    # Sample XML file for XML questions
-    ├── Prog05_JavaBeanDemo.java      # Q5: Simple JavaBean
-    ├── Prog06_XMLRootChildNodes.java # Q6: XML root and child nodes display
-    ├── Prog07_DOMTreeView.java       # Q7: Hierarchical DOM tree viewer
-    ├── servlets/
-    │   ├── Prog08_HelloWorldServlet.java # Q8: Hello World Servlet
-    │   ├── Prog09_ArithmeticServlet.java # Q9: Arithmetic calculator Servlet
-    │   ├── calc.html                     # HTML form for calculator
-    │   ├── Prog10_LoginServlet.java      # Q10: Read login parameters Servlet
-    │   ├── login.html                    # HTML form for login
-    │   └── web.xml                       # Standard deployment descriptor
-    ├── jsp/
-    │   ├── Prog11_HelloWorldHits.jsp # Q11: Hello World and hit counter
-    │   └── Prog12_JSPTagsDemo.jsp    # Q12: Declarative, Scriptlet & Expression tags
-    └── jdbc/
-        ├── Prog13_CreateTable.java   # Q13: JDBC Create Table
-        ├── Prog14_InsertData.java    # Q14: JDBC Insert Data
-        └── Prog15_SelectData.java    # Q15: JDBC Select Data
+│   ├── javax.servlet-api-4.0.1.jar       # Servlet API library
+│   └── sqlite-jdbc.jar                   # Standalone JDBC driver
+├── test_all.sh                           # Master test script (Linux)
+├── test_all.bat                          # Master test script (Windows)
+├── unit1/                                # Unit 1 Core Collection Programs
+│   ├── Prog01_IteratorDemo.java
+│   ├── Prog02_ComparableDemo.java
+│   ├── Prog03_MapComparison.java
+│   └── Prog04_ListMethodsDemo.java
+├── unit2_linux/                          # Unit 2 for Linux Labs (isolated folders)
+│   ├── prog05_javabean/
+│   ├── prog06_xml_nodes/
+│   ├── prog07_dom_tree/
+│   ├── prog08_servlet_hello/
+│   ├── prog09_servlet_calculator/
+│   ├── prog10_servlet_login/
+│   ├── prog11_jsp_hits/
+│   ├── prog12_jsp_tags/
+│   ├── prog13_jdbc_create_table/
+│   ├── prog14_jdbc_insert/
+│   └── prog15_jdbc_select/
+└── unit2_windows/                        # Unit 2 for Windows Labs (isolated folders)
+    ├── prog05_javabean/
+    ├── prog06_xml_nodes/
+    ├── prog07_dom_tree/
+    ├── prog08_servlet_hello/
+    ├── prog09_servlet_calculator/
+    ├── prog10_servlet_login/
+    ├── prog11_jsp_hits/
+    ├── prog12_jsp_tags/
+    ├── prog13_jdbc_create_table/
+    ├── prog14_jdbc_insert/
+    └── prog15_jdbc_select/
 ```
 
 ---
 
-## Index of Programs
+## Unit 2 Programs Quick Reference
 
-### Unit 1
-- **Program 1:** [Access a collection using an Iterator](unit1/Prog01_IteratorDemo.java)
-- **Program 2:** [Implement the Comparable interface](unit1/Prog02_ComparableDemo.java)
-- **Program 3:** [Differentiate between different Map classes](unit1/Prog03_MapComparison.java)
-- **Program 4:** [Methods of LinkedList and ArrayList](unit1/Prog04_ListMethodsDemo.java)
-
-### Unit 2
-- **Program 5:** [Create a simple JavaBean](unit2/Prog05_JavaBeanDemo.java)
-- **Program 6:** [Display root node and child nodes of XML document](unit2/Prog06_XMLRootChildNodes.java)
-- **Program 7:** [View DOM tree hierarchy](unit2/Prog07_DOMTreeView.java)
-- **Program 8:** [Servlet: Display "Hello World"](unit2/servlets/Prog08_HelloWorldServlet.java)
-- **Program 9:** [Servlet: Arithmetic operations](unit2/servlets/Prog09_ArithmeticServlet.java)
-- **Program 10:** [Servlet: Read parameters from login page](unit2/servlets/Prog10_LoginServlet.java)
-- **Program 11:** [JSP: Hello World and number of hits](unit2/jsp/Prog11_HelloWorldHits.jsp)
-- **Program 12:** [JSP: Scriptlet, Expression, and Declarative tags](unit2/jsp/Prog12_JSPTagsDemo.jsp)
-- **Program 13:** [JDBC: Create table in database](unit2/jdbc/Prog13_CreateTable.java)
-- **Program 14:** [JDBC: Insert data into table](unit2/jdbc/Prog14_InsertData.java)
-- **Program 15:** [JDBC: SELECT operation on database](unit2/jdbc/Prog15_SelectData.java)
+| # | Topic | Folder Name | Key Files |
+|---|---|---|---|
+| **5** | **JavaBean** | `prog05_javabean` | `StudentBean.java` |
+| **6** | **XML Root & Child Nodes** | `prog06_xml_nodes` | `XMLNodes.java`, `input.xml` |
+| **7** | **DOM Tree View** | `prog07_dom_tree` | `DOMTreeView.java`, `input.xml` |
+| **8** | **Servlet: Hello World** | `prog08_servlet_hello` | `HelloServlet.java`, `web.xml` |
+| **9** | **Servlet: Calculator** | `prog09_servlet_calculator` | `CalcServlet.java`, `calc.html`, `web.xml` |
+| **10** | **Servlet: Login Parameters** | `prog10_servlet_login` | `LoginServlet.java`, `login.html`, `web.xml` |
+| **11** | **JSP: Hit Counter** | `prog11_jsp_hits` | `hits.jsp` |
+| **12** | **JSP: Tags Demo** | `prog12_jsp_tags` | `tags.jsp` |
+| **13** | **JDBC: Create Table** | `prog13_jdbc_create_table`| `CreateTable.java` |
+| **14** | **JDBC: Insert Data** | `prog14_jdbc_insert` | `InsertData.java` |
+| **15** | **JDBC: Select Data** | `prog15_jdbc_select` | `SelectData.java` |
 
 ---
 
-## Compilation & Execution Commands
+## How to Run Any Single Program in Exam
 
-### Unit 1 (Both Windows & Linux)
+### On Linux:
 ```bash
-# Program 1
-javac unit1/Prog01_IteratorDemo.java
-java -cp unit1 Prog01_IteratorDemo
-
-# Program 2
-javac unit1/Prog02_ComparableDemo.java
-java -cp unit1 Prog02_ComparableDemo
-
-# Program 3
-javac unit1/Prog03_MapComparison.java
-java -cp unit1 Prog03_MapComparison
-
-# Program 4
-javac unit1/Prog04_ListMethodsDemo.java
-java -cp unit1 Prog04_ListMethodsDemo
+cd unit2_linux/prog05_javabean
+./run.sh
 ```
 
-### Unit 2 (XML & JavaBean)
-```bash
-# Program 5
-javac unit2/Prog05_JavaBeanDemo.java
-java -cp unit2 Prog05_JavaBeanDemo
-
-# Program 6
-javac unit2/Prog06_XMLRootChildNodes.java
-java -cp unit2 Prog06_XMLRootChildNodes
-
-# Program 7
-javac unit2/Prog07_DOMTreeView.java
-java -cp unit2 Prog07_DOMTreeView
-```
-
-### Unit 2 JDBC Programs
-
-#### On Linux / macOS:
-```bash
-javac -cp lib/sqlite-jdbc.jar unit2/jdbc/*.java
-
-# Run Q13 (Create Table)
-java -cp "unit2/jdbc:lib/sqlite-jdbc.jar" Prog13_CreateTable
-
-# Run Q14 (Insert Data)
-java -cp "unit2/jdbc:lib/sqlite-jdbc.jar" Prog14_InsertData
-
-# Run Q15 (Select Data)
-java -cp "unit2/jdbc:lib/sqlite-jdbc.jar" Prog15_SelectData
-```
-
-#### On Windows (CMD or PowerShell):
-```cmd
-javac -cp "lib\sqlite-jdbc.jar" unit2\jdbc\*.java
-
-# Run Q13 (Create Table)
-java -cp "unit2\jdbc;lib\sqlite-jdbc.jar" Prog13_CreateTable
-
-# Run Q14 (Insert Data)
-java -cp "unit2\jdbc;lib\sqlite-jdbc.jar" Prog14_InsertData
-
-# Run Q15 (Select Data)
-java -cp "unit2\jdbc;lib\sqlite-jdbc.jar" Prog15_SelectData
-```
-
-> **Note for College Labs (MySQL):**
-> Each JDBC file contains pre-commented MySQL credentials. To switch to MySQL in your college lab, simply uncomment the MySQL lines at the top of the file:
-> ```java
-> static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-> static final String URL = "jdbc:mysql://localhost:3306/collegedb";
-> static final String USER = "root";
-> static final String PASS = "root";
-> ```
+### On Windows:
+Double click `run.bat` (or `compile.bat` for servlets) inside the program's folder.
